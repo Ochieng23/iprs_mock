@@ -22,9 +22,9 @@ The API accepts a record identifier plus optional fields to cross-check, retriev
 ### Getting Started
 
 1. **Install dependencies**
-   ```bash
+   
    npm install
-   ```
+   
 2. **Add environment config**
    ```bash
    cp .env.example .env
