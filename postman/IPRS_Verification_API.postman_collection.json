@@ -1,0 +1,190 @@
+{
+  "info": {
+    "name": "IPRS Verification API",
+    "description": "Sample requests for the IPRS clone verification endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "c9159477-4579-4fbc-9308-181b1146d086"
+  },
+  "item": [
+    {
+      "name": "Verify National ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"idNumber\": \"21234567\",\n  \"firstName\": \"Mary\",\n  \"surname\": \"Kimani\",\n  \"gender\": \"Female\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/verify/national-id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "verify",
+            "national-id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Verify Passport",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"passportNumber\": \"CK012345\",\n  \"firstName\": \"Mary\",\n  \"surname\": \"Kimani\",\n  \"nationality\": \"Kenyan\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/verify/passport",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "verify",
+            "passport"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Verify Birth Certificate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"certificateNumber\": \"BC-2017-015\",\n  \"firstName\": \"Leah\",\n  \"placeOfBirth\": \"Nairobi Hospital\",\n  \"motherName\": \"Amina Wanjiru Omondi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/verify/birth-certificate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "verify",
+            "birth-certificate"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Verify Death Record",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"idNumber\": \"33445566\",\n  \"firstName\": \"Margaret\",\n  \"placeOfDeath\": \"Kisumu County Hospital\",\n  \"deathRegistrationNumber\": \"DRN-2021-778\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/verify/death-record",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "verify",
+            "death-record"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Verify Alien Registration",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"alienId\": \"ALN-0007\",\n  \"firstName\": \"Samuel\",\n  \"nationality\": \"Ghanaian\",\n  \"permitCategory\": \"Work Permit - Class D\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/verify/alien-registration",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "verify",
+            "alien-registration"
+          ]
+        }
+      }
+    }
+  ]
+}
